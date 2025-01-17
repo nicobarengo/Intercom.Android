@@ -1,0 +1,279 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0-android</TargetFramework>
+        <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <!--
+          Enable trim analyzers for Android class libraries.
+          To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
+        -->
+        <IsTrimmable>true</IsTrimmable>
+        
+        <PackageId>BarengoEngineering.Intercom.Android</PackageId>
+        <Version>15.11.5.1</Version>
+        <Authors>Nicolas Barengo</Authors>
+        <Company>Barengo-Engineering</Company>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Description>Intercom Lite Binding for Xamarin.iOS (NET9)</Description>
+        <PackageProjectUrl>https://github.com/nicobarengo/Intercom.Android</PackageProjectUrl>
+        <EmbedUntrackedSources>True</EmbedUntrackedSources>
+        <PackageIconUrl>https://raw.githubusercontent.com/nicobarengo/Intercom.Android/main/intercom.png</PackageIconUrl>
+        <!--
+          NOTE: you can simply add .aar or .jar files in this directory to be included in the project.
+          To learn more, see: https://learn.microsoft.com/dotnet/maui/migration/android-binding-projects
+        -->
+<!--        <RootNamespace>IntercomSDK</RootNamespace>-->
+    </PropertyGroup>
+
+    <!-- Reference to Android Gradle project -->
+    <ItemGroup>
+        <AndroidGradleProject Include="../native/build.gradle.kts" >
+            <ModuleName>intercom</ModuleName>
+            <Bind>true</Bind>
+            <Pack>true</Pack>
+        </AndroidGradleProject>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="GoogleGson" Version="2.11.0.4" />
+        <PackageReference Include="Square.OkHttp3">
+            <Version>4.12.0.7</Version>
+        </PackageReference>
+        <PackageReference Include="Square.OkIO">
+          <Version>3.9.1.1</Version>
+        </PackageReference>
+        <PackageReference Include="Square.Retrofit2">
+            <Version>2.11.0.3</Version>
+        </PackageReference>
+        <PackageReference Include="XAB.Facebook.Shimmer" Version="0.5.0.4" />
+        <PackageReference Include="XAB.FlexboxLayout" Version="3.0.0.2" />
+        <PackageReference Include="Xamarin.Android.Glide">
+            <Version>4.16.0.10</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Activity">
+            <Version>1.9.3.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Activity.Compose">
+            <Version>1.9.3.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Annotation">
+            <Version>1.9.1.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.AppCompat">
+            <Version>1.7.0.4</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.AppCompat.AppCompatResources">
+          <Version>1.7.0.4</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Collection">
+          <Version>1.4.5.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Compose.Foundation">
+            <Version>1.7.6</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Compose.Material">
+            <Version>1.7.6</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Compose.Material.Icons.Core">
+            <Version>1.7.6</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Compose.Material3">
+          <Version>1.3.1.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Compose.Runtime">
+          <Version>1.7.6</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Compose.UI">
+            <Version>1.7.6</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Compose.UI.Tooling">
+            <Version>1.7.6</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Compose.UI.Tooling.Preview">
+          <Version>1.7.6</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.ConstraintLayout">
+            <Version>2.2.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Core">
+            <Version>1.15.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx">
+            <Version>1.15.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.DataBinding.ViewBinding">
+          <Version>8.8.0</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.ExifInterface">
+          <Version>1.3.7.8</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Fragment">
+            <Version>1.8.5.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Fragment.Ktx">
+            <Version>1.8.5.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.UI">
+            <Version>1.0.0.31</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils">
+            <Version>1.0.0.30</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime">
+            <Version>2.8.7.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime.Ktx">
+            <Version>2.8.7.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel">
+            <Version>2.8.7.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel.Compose">
+            <Version>2.8.7.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel.Ktx">
+            <Version>2.8.7.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Media3.ExoPlayer">
+          <Version>1.5.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Navigation.Compose">
+          <Version>2.8.5</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Navigation.Runtime">
+          <Version>2.8.5</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Navigation.Runtime.Ktx">
+          <Version>2.8.5</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Navigation.UI.Ktx">
+          <Version>2.8.5</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Paging.Common">
+          <Version>3.3.5</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.Paging.Runtime.Ktx">
+          <Version>3.3.5</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.ProfileInstaller.ProfileInstaller">
+          <Version>1.4.1.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.RecyclerView">
+            <Version>1.3.2.9</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.VectorDrawable">
+            <Version>1.2.0.4</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.VectorDrawable.Animated">
+            <Version>1.2.0.4</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Firebase.Messaging">
+          <Version>124.1.0</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Google.Accompanist.Permissions">
+          <Version>0.37.0</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Google.Accompanist.Placeholder">
+            <Version>0.36.0.2</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Google.Accompanist.SystemUIController">
+            <Version>0.36.0.2</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.KotlinX.Coroutines.Android">
+            <Version>1.9.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.KotlinX.Coroutines.Core">
+            <Version>1.9.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Google.Android.Material">
+            <Version>1.12.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="2.0.21.1" />
+
+        <PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.0.21.1" />
+
+        <PackageReference Include="Xamarin.KotlinX.Serialization.Core.Jvm">
+          <Version>1.7.3.1</Version>
+        </PackageReference>
+        
+        <PackageReference Include="Xamarin.Google.Accompanist.DrawablePainter">
+            <Version>0.37.0</Version>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+
+<!--        <AndroidMavenLibrary Include="io.coil-kt:coil" Version="2.7.0" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="io.coil-kt:coil-base" Version="2.7.0" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="io.coil-kt:coil-gif" Version="2.7.0" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="io.coil-kt:coil-video" Version="2.7.0" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="io.coil-kt:coil-compose-base" Version="2.7.0" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="io.coil-kt:coil-compose" Version="2.7.0" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="androidx.paging:paging-compose-android" Version="3.3.5" Bind="false" VerifyDependencies="false"  />-->
+<!--        <AndroidMavenLibrary Include="androidx.paging:paging-compose" Version="3.3.5" Bind="false" />-->
+<!--        <AndroidMavenLibrary Include="io.intercom.android:intercom-sdk-fcm" Version="15.11.5" Bind="false" />-->
+<!--        <AndroidMavenLibrary Include="com.intercom:twig" Version="1.3.0" Bind="false" />-->
+
+<!--        <AndroidMavenLibrary Include="io.intercom.android:intercom-sdk-base" Version="15.11.5" Bind="false" VerifyDependencies="false" />-->
+<!--        <AndroidMavenLibrary Include="io.intercom.android:intercom-sdk" Version="15.11.5" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="io.intercom.android:intercom-sdk-ui" Version="15.11.5" Bind="false" VerifyDependencies="false" />-->
+<!--        <AndroidMavenLibrary Include="org.aspectj:aspectjrt" Version="1.9.7" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="org.slf4j:slf4j-api" Version="1.8.0-beta4" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="org.mp4parser:isoparser" Version="1.9.56" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="io.intercom.android:intercom-sdk-lightcompressor" Version="15.11.5" Bind="false"/> -->
+<!--        <AndroidMavenLibrary Include="io.intercom.android:nexus-client-android" Version="6.3.4" Bind="false"/>-->
+<!--        <AndroidMavenLibrary Include="com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter" Version="1.0.0" Bind="false"/>-->
+    </ItemGroup>
+
+    <ItemGroup>
+        <AndroidLibrary Remove="Jars\coil-2.7.0.aar" />
+        <AndroidLibrary Include="Jars\coil-2.7.0.aar" Bind="false" Visible="false" />
+        
+        <AndroidLibrary Remove="Jars\coil-base-2.7.0.aar" />
+        <AndroidLibrary Include="Jars\coil-base-2.7.0.aar" Bind="false" Visible="false" />
+
+        <AndroidLibrary Remove="Jars\coil-compose-2.7.0.aar" />
+        <AndroidLibrary Include="Jars\coil-compose-2.7.0.aar" Bind="false"  Visible="false" />
+
+        <AndroidLibrary Remove="Jars\coil-compose-base-2.7.0.aar" />
+        <AndroidLibrary Include="Jars\coil-compose-base-2.7.0.aar" Bind="false"  Visible="false" />
+
+        <AndroidLibrary Remove="Jars\coil-gif-2.7.0.aar" />
+        <AndroidLibrary Include="Jars\coil-gif-2.7.0.aar" Bind="false" Visible="false" />
+        
+        <AndroidLibrary Remove="Jars\coil-video-2.7.0.aar" />
+        <AndroidLibrary Include="Jars\coil-video-2.7.0.aar" Bind="false" Visible="false" />
+        
+        <AndroidLibrary Remove="Jars\intercom-sdk-15.11.5.aar" />
+        <AndroidLibrary Include="Jars\intercom-sdk-15.11.5.aar" Bind="false" Visible="false" />
+
+        <AndroidLibrary Remove="Jars\intercom-sdk-base-15.11.5.aar" />
+        <AndroidLibrary Include="Jars\intercom-sdk-base-15.11.5.aar" Bind="false" Visible="false" />
+
+        <AndroidLibrary Remove="Jars\intercom-sdk-ui-15.11.5.aar" />
+        <AndroidLibrary Include="Jars\intercom-sdk-ui-15.11.5.aar" Bind="false" Visible="false" />
+        
+        <AndroidLibrary Remove="Jars\intercom-sdk-fcm-15.11.5.aar" />
+        <AndroidLibrary Include="Jars\intercom-sdk-fcm-15.11.5.aar" Bind="false" Visible="false" />
+
+        <AndroidLibrary Remove="Jars\intercom-sdk-lightcompressor-15.11.5.aar" />
+        <AndroidLibrary Include="Jars\intercom-sdk-lightcompressor-15.11.5.aar" Bind="false" Visible="false" />
+        
+        <AndroidLibrary Remove="Jars\nexus-client-android-6.3.4.aar" />
+        <AndroidLibrary Include="Jars\nexus-client-android-6.3.4.aar" Bind="false" Visible="false" />
+        
+        <AndroidLibrary Remove="Jars\paging-compose-android-3.3.5.aar" />
+        <AndroidLibrary Include="Jars\paging-compose-android-3.3.5.aar" Bind="false" Visible="false" />
+
+        <AndroidLibrary Remove="Jars\paging-compose-3.3.5.aar" />
+        <AndroidLibrary Include="Jars\paging-compose-3.3.5.aar" Bind="false" Visible="false" />
+
+        <AndroidLibrary Remove="Jars\twig-1.3.0.aar" />
+        <AndroidLibrary Include="Jars\twig-1.3.0.aar" Bind="false" Visible="false" />
+        
+        <AndroidLibrary Remove="Jars\retrofit2-kotlinx-serialization-converter-1.0.0.jar" Visible="false"  />
+        <AndroidJavaLibrary Include="Jars\retrofit2-kotlinx-serialization-converter-1.0.0.jar" Visible="false"  />
+    </ItemGroup>
+
+</Project>
