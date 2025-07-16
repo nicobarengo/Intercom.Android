@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "io.intercom.android"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 21
@@ -26,7 +26,7 @@ android {
 }
 
 dependencies {
-    implementation("io.intercom.android:intercom-sdk:15.11.5")
-    implementation("com.google.firebase:firebase-messaging:23.1.+")
+    implementation("io.intercom.android:intercom-sdk:17.0.2")
+    implementation("com.google.firebase:firebase-messaging:24.1.+")
 }
 
